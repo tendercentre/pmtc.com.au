@@ -1,6 +1,6 @@
-import { NextSeo } from 'next-seo';
+import { NextSeo } from "next-seo";
 
-function FAQPage() {
+export default function FAQPage() {
   return (
     <>
       <NextSeo title="FAQ" />
@@ -42,5 +42,3 @@ function FAQPage() {
     </>
   );
 }
-
-export default FAQPage;

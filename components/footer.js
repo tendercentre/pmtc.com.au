@@ -1,6 +1,6 @@
-import { config } from '../data';
+import { config } from "../data";
 
-function Footer() {
+export function Footer() {
   return (
     <footer className="w-full mt-20 bg-white">
       <div className="max-w-5xl px-4 py-12 mx-auto sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
@@ -25,5 +25,3 @@ function Footer() {
     </footer>
   );
 }
-
-export { Footer };

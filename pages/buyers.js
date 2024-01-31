@@ -1,9 +1,9 @@
-import { NextSeo } from 'next-seo';
-import Link from 'next/link';
+import { NextSeo } from "next-seo";
+import Link from "next/link";
 
-import { config } from '../data';
+import { config } from "../data";
 
-function BuyersPage() {
+export default function BuyersPage() {
   return (
     <>
       <NextSeo title="Buyers" />
@@ -34,9 +34,9 @@ function BuyersPage() {
           </ul>
           <p>
             All successful bids do incur a buyers premium (
-            {config.buyersPremium} of the sale price) and a{' '}
+            {config.buyersPremium} of the sale price) and a{" "}
             {config.processingFee} per lot processing fee. For more information,
-            please ask our staff or call us on{' '}
+            please ask our staff or call us on{" "}
             <a href={`tel:${config.phone}`}>{config.phone}</a>.
           </p>
         </div>
@@ -51,5 +51,3 @@ function BuyersPage() {
     </>
   );
 }
-
-export default BuyersPage;

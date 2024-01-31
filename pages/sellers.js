@@ -1,9 +1,9 @@
-import { NextSeo } from 'next-seo';
-import Link from 'next/link';
+import { NextSeo } from "next-seo";
+import Link from "next/link";
 
-import { config } from '../data';
+import { config } from "../data";
 
-function SellersPage() {
+export default function SellersPage() {
   return (
     <>
       <NextSeo title="Sellers" />
@@ -19,7 +19,7 @@ function SellersPage() {
           </p>
           <p>
             All goods coming in do need to be approved by staff, so for larger
-            items it is best to call ahead first or even better,{' '}
+            items it is best to call ahead first or even better,{" "}
             <a className="inline-block" href={`mailto:${config.email}`}>
               email us a picture
             </a>
@@ -80,14 +80,10 @@ function SellersPage() {
             downsizing and deceased estates
           </p>
           <p>
-            <Link href="/clearance/">
-              <a>Clearance solutions information</a>
-            </Link>
+            <Link href="/clearance/">Clearance solutions information</Link>
           </p>
         </div>
       </div>
     </>
   );
 }
-
-export default SellersPage;

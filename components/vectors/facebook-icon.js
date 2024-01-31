@@ -1,6 +1,4 @@
-import * as React from 'react';
-
-function FacebookIcon(props) {
+export function FacebookIcon(props) {
   return (
     <svg
       aria-label="Facebook"
@@ -16,5 +14,3 @@ function FacebookIcon(props) {
     </svg>
   );
 }
-
-export { FacebookIcon };

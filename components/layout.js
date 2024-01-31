@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-import { Navigation } from './navigation';
-import { Header } from './header';
-import { Footer } from './footer';
+import { Navigation } from "./navigation";
+import { Header } from "./header";
+import { Footer } from "./footer";
 
-function Layout({ children }) {
+export function Layout({ children }) {
   return (
     <div className="flex flex-col min-h-screen font-sans antialiased text-white bg-blue-900 fill-available">
       <Navigation />
@@ -19,5 +19,3 @@ function Layout({ children }) {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
-export { Layout };

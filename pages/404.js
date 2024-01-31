@@ -1,7 +1,7 @@
-import { NextSeo } from 'next-seo';
-import Link from 'next/link';
+import { NextSeo } from "next-seo";
+import Link from "next/link";
 
-function NotFoundPage() {
+export default function NotFoundPage() {
   return (
     <>
       <NextSeo title="404: Page Not Found" />
@@ -18,14 +18,10 @@ function NotFoundPage() {
             in touch.
           </p>
           <p>
-            <Link href="/">
-              <a>Take me home</a>
-            </Link>
+            <Link href="/">Take me home</Link>
           </p>
         </div>
       </div>
     </>
   );
 }
-
-export default NotFoundPage;

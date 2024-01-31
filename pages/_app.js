@@ -1,25 +1,26 @@
-import { DefaultSeo } from 'next-seo';
-import Head from 'next/head';
-import PropTypes from 'prop-types';
+import "../styles/globals.css";
 
-import { Layout } from '../components/layout';
-import 'typeface-oswald';
-import 'typeface-roboto';
-import '../styles/index.css';
-import { config } from '../data';
-import tailwindConfig from '../tailwind.config';
+import { DefaultSeo } from "next-seo";
+import Head from "next/head";
+import PropTypes from "prop-types";
 
-function App({ Component, pageProps }) {
+import "typeface-oswald";
+import "typeface-roboto";
+import { Layout } from "../components/layout";
+import { config } from "../data";
+import tailwindConfig from "../tailwind.config";
+
+export default function App({ Component, pageProps }) {
   return (
     <Layout>
       <DefaultSeo
         titleTemplate={`%s | ${config.title}`}
         description={config.description}
         openGraph={{
-          type: 'website',
-          locale: 'en_AU',
-          url: 'https://www.pmtc.com.au/',
-          site_name: 'PMTC',
+          type: "website",
+          locale: "en_AU",
+          url: "https://www.pmtc.com.au/",
+          site_name: "PMTC",
         }}
       />
       <Head>
@@ -64,5 +65,3 @@ App.propTypes = {
   Component: PropTypes.func.isRequired,
   pageProps: PropTypes.object.isRequired,
 };
-
-export default App;

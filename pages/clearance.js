@@ -1,7 +1,7 @@
-import { NextSeo } from 'next-seo';
-import { config } from '../data';
+import { NextSeo } from "next-seo";
+import { config } from "../data";
 
-function ClearanceSolutionsPage() {
+export default function ClearanceSolutionsPage() {
   return (
     <>
       <NextSeo title="Clearance Solutions" />
@@ -22,10 +22,10 @@ function ClearanceSolutionsPage() {
             thing to worry about during an already stressful time.
           </p>
           <p>
-            If you would like to employ our services, please contact us on{' '}
+            If you would like to employ our services, please contact us on{" "}
             <a href={`tel:${config.phone}`} className="inline-block">
               {config.phone}
-            </a>{' '}
+            </a>{" "}
             during business hours.
           </p>
         </div>
@@ -33,5 +33,3 @@ function ClearanceSolutionsPage() {
     </>
   );
 }
-
-export default ClearanceSolutionsPage;
