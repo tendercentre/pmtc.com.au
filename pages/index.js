@@ -1,10 +1,11 @@
-import { NextSeo } from 'next-seo';
-import Link from 'next/link';
-import { useInView } from 'react-intersection-observer';
+import { NextSeo } from "next-seo";
+import Link from "next/link";
+import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 
-import { config } from '../data';
+import { config } from "../data";
 
-function IndexPage() {
+export default function IndexPage() {
   return (
     <>
       <NextSeo title="Home" />
@@ -22,7 +23,7 @@ function Hero() {
   return (
     <article className="relative overflow-hidden text-white bg-blue-800 border-b-8 border-blue-900 rounded">
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/hero.jpg"
           width="960"
           height="539"
@@ -46,19 +47,19 @@ function Hero() {
 
 const cards = [
   {
-    heading: 'Buying?',
+    heading: "Buying?",
     copy: `<p>All the information you need about how buying from the Tender Centre works.</p>`,
-    slug: '/buyers/',
+    slug: "/buyers/",
   },
   {
-    heading: 'Selling?',
+    heading: "Selling?",
     copy: `<p>When can you take goods in to sell? What are the commission rates?</p><p>Find out here.</p>`,
-    slug: '/sellers/',
+    slug: "/sellers/",
   },
   {
-    heading: 'FAQ',
+    heading: "FAQ",
     copy: `<p>You got questions?</p><p>We got answers!</p>`,
-    slug: '/faq/',
+    slug: "/faq/",
   },
 ];
 
@@ -76,13 +77,12 @@ function Cards() {
           <div className="flex flex-col flex-1 px-4 py-6 border-t">
             <div dangerouslySetInnerHTML={{ __html: card.copy }} />
             <div className="pt-12 mt-auto">
-              <Link href={card.slug}>
-                <a
-                  aria-label={`Read more about ${card.heading}`}
-                  className="inline-block w-full px-4 py-2 font-medium text-center text-white bg-blue-800 border-b-8 border-blue-900 rounded"
-                >
-                  Read more
-                </a>
+              <Link
+                href={card.slug}
+                aria-label={`Read more about ${card.heading}`}
+                className="inline-block w-full px-4 py-2 font-medium text-center text-white bg-blue-800 border-b-8 border-blue-900 rounded"
+              >
+                Read more
               </Link>
             </div>
           </div>
@@ -207,5 +207,3 @@ function Map() {
     </article>
   );
 }
-
-export default IndexPage;

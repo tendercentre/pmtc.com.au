@@ -1,6 +1,4 @@
-import React from 'react';
-
-function TermsAndConditions() {
+export function TermsAndConditions() {
   return (
     <div>
       <h3>Terms &amp; Conditions</h3>
@@ -134,5 +132,3 @@ function TermsAndConditions() {
     </div>
   );
 }
-
-export { TermsAndConditions };

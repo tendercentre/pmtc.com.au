@@ -1,6 +1,6 @@
-import { TermsAndConditions } from './terms-and-conditions';
+import { TermsAndConditions } from "./terms-and-conditions";
 
-function BiddingForm() {
+export function BiddingForm() {
   return (
     <form
       action="/success/"
@@ -22,7 +22,7 @@ function BiddingForm() {
                 placeholder="Johnny"
                 required
                 type="text"
-                className="w-full"
+                className="w-full rounded border-gray-300"
               />
               <input
                 type="text"
@@ -31,6 +31,7 @@ function BiddingForm() {
                 autoComplete="family-name"
                 placeholder="Appleseed"
                 required
+                className="rounded border-gray-300"
               />
             </label>
           </div>
@@ -44,6 +45,7 @@ function BiddingForm() {
                 placeholder="35 Merrigal Road"
                 type="text"
                 required
+                className="rounded border-gray-300"
               />
               <input
                 type="text"
@@ -51,6 +53,7 @@ function BiddingForm() {
                 name="address-line2"
                 placeholder="Port Macquarie NSW 2444"
                 required
+                className="rounded border-gray-300"
               />
             </label>
           </div>
@@ -65,6 +68,7 @@ function BiddingForm() {
                   autoComplete="tel"
                   placeholder="0400 000 000"
                   required
+                  className="rounded border-gray-300"
                 />
               </label>
             </div>
@@ -80,6 +84,7 @@ function BiddingForm() {
                   autoComplete="email"
                   placeholder="your.name@example.com"
                   required
+                  className="rounded border-gray-300"
                 />
               </label>
             </div>
@@ -97,6 +102,7 @@ function BiddingForm() {
                   autoComplete="off"
                   placeholder={10123}
                   required
+                  className="rounded border-gray-300"
                 />
               </label>
             </div>
@@ -110,6 +116,7 @@ function BiddingForm() {
                   autoComplete="off"
                   placeholder="Acoustic guitar"
                   required
+                  className="rounded border-gray-300"
                 />
               </label>
             </div>
@@ -119,7 +126,7 @@ function BiddingForm() {
                 <div className="flex items-center border rounded bg-grey-lighter">
                   <div className="flex-auto px-4 rounded-l">$</div>
                   <input
-                    className="flex-auto block w-full px-4 py-3 bg-white border-l border-r shadow-inner appearance-none text-grey-darker"
+                    className="flex-auto border-y-0 border-gray-200 block w-full px-4 py-3 bg-white border-l border-r shadow-inner appearance-none text-grey-darker"
                     id="bid-price"
                     autoComplete="off"
                     name="bid-price"
@@ -138,7 +145,7 @@ function BiddingForm() {
               <label className="grid gap-2" htmlFor="message">
                 <div>Message</div>
                 <textarea
-                  className="w-full h-48 p-3 border rounded shadow-inner text-grey-darker"
+                  className="w-full border-gray-300 h-48 p-3 border rounded shadow-inner text-grey-darker"
                   id="message"
                   name="message"
                   spellCheck
@@ -157,7 +164,7 @@ function BiddingForm() {
           <label className="inline-flex items-center">
             <input type="checkbox" defaultChecked />
             <span className="pl-2">
-              I agree to the{' '}
+              I agree to the{" "}
               <strong className="text-grey-darker">
                 Terms &amp; Conditions
               </strong>
@@ -182,5 +189,3 @@ function BiddingForm() {
     </form>
   );
 }
-
-export { BiddingForm };

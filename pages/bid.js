@@ -1,8 +1,8 @@
-import { NextSeo } from 'next-seo';
+import { NextSeo } from "next-seo";
 
-import { BiddingForm } from '../components/bidding-form';
+import { BiddingForm } from "../components/bidding-form";
 
-function BidPage() {
+export default function BidPage() {
   return (
     <>
       <NextSeo title="Bid" />
@@ -17,14 +17,14 @@ function BidPage() {
             </p>
             <p className="lead">
               You will need to know the lot number of the item you are bidding
-              on,{' '}
+              on,{" "}
               <a href="/catalogue.pdf" target="_blank">
                 you can use our catalogue for reference.
               </a>
             </p>
             <p>
               If you would like to bid on multiple items, please fill in and
-              submit this form for each item or you could write it in the{' '}
+              submit this form for each item or you could write it in the{" "}
               <a href="#message">message</a> field at the bottom
             </p>
           </div>
@@ -34,5 +34,3 @@ function BidPage() {
     </>
   );
 }
-
-export default BidPage;

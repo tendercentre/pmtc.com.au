@@ -1,7 +1,7 @@
-import { NextSeo } from 'next-seo';
-import Link from 'next/link';
+import { NextSeo } from "next-seo";
+import Link from "next/link";
 
-function SuccessPage() {
+export default function SuccessPage() {
   return (
     <>
       <NextSeo title="Success" />
@@ -18,13 +18,9 @@ function SuccessPage() {
           <p>
             If you would like to submit another bid, click the button below.
           </p>
-          <Link href="/bid/">
-            <a>Keep bidding</a>
-          </Link>
+          <Link href="/bid/">Keep bidding</Link>
         </div>
       </div>
     </>
   );
 }
-
-export default SuccessPage;

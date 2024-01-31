@@ -1,4 +1,4 @@
-function InstagramIcon(props) {
+export function InstagramIcon(props) {
   return (
     <svg
       aria-label="Instagram"
@@ -15,5 +15,3 @@ function InstagramIcon(props) {
     </svg>
   );
 }
-
-export { InstagramIcon };
