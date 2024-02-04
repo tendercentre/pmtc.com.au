@@ -1,3 +1,6 @@
+import aspectRatioPlugin from '@tailwindcss/aspect-ratio';
+import formsPlugin from '@tailwindcss/forms';
+import typographyPlugin from '@tailwindcss/typography';
 import { type Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
@@ -42,15 +45,15 @@ module.exports = {
 		},
 	},
 	plugins: [
-		// https://github.com/tailwindlabs/tailwindcss-aspect-ratio#readme
-		require('@tailwindcss/aspect-ratio'),
+		/** @see https://github.com/tailwindlabs/tailwindcss-aspect-ratio#readme */
+		aspectRatioPlugin,
 
-		// https://github.com/tailwindlabs/tailwindcss-typography#readme
-		require('@tailwindcss/typography'),
+		/** @see https://github.com/tailwindlabs/tailwindcss-typography#readme */
+		typographyPlugin,
 
-		// https://github.com/tailwindlabs/tailwindcss-forms#readme
-		require('@tailwindcss/forms')({
-			strategy: 'base', // only generate global styles
+		/** @see https://github.com/tailwindlabs/tailwindcss-forms#readme */
+		formsPlugin({
+			strategy: 'base',
 		}),
 	],
 } satisfies Config;
