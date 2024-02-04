@@ -8,10 +8,10 @@ export function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
 			viewBox="0 0 512 512"
 			{...props}
 		>
-			<rect width={512} height={512} rx="15%" />
+			<rect height={512} rx="15%" width={512} />
 			<path
-				fill="#fff"
 				d="M330 512V322h64l9-74h-73v-47c0-22 6-36 37-36h39V99c-7-1-30-3-57-3-57 0-95 34-95 98v54h-64v74h64v190z"
+				fill="#fff"
 			/>
 		</svg>
 	);

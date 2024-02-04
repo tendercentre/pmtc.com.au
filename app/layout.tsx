@@ -68,10 +68,10 @@ function Nav() {
 		<nav>
 			<ul className="flex items-center justify-around w-full max-w-5xl mx-auto">
 				{config.siteNavigation.map((navItem) => (
-					<li key={navItem.slug} className="flex-1">
+					<li className="flex-1" key={navItem.slug}>
 						<NextLink
-							href={navItem.slug}
 							className="inline-block w-full py-4 font-medium text-center transition duration-150 ease-in-out border-t-4 border-transparent hover:border-yellow-200 hover:bg-blue-800"
+							href={navItem.slug}
 						>
 							{navItem.label}
 						</NextLink>
@@ -102,9 +102,9 @@ function Footer() {
 				<div className="flex justify-center space-x-6 md:order-2">
 					{config.socialLinks.map((socialLink) => (
 						<a
-							key={socialLink.url}
-							href={socialLink.url}
 							className="text-gray-500 transition duration-150 ease-in-out hover:text-gray-600"
+							href={socialLink.url}
+							key={socialLink.url}
 						>
 							<span className="sr-only">{socialLink.label}</span>
 							<socialLink.icon className="w-6 h-6" />

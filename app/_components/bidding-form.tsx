@@ -4,34 +4,34 @@ export function BiddingForm() {
 	return (
 		<form
 			action="/success/"
-			method="POST"
-			data-netlify="true"
-			name="bid-form"
 			className="w-full mx-auto mb-0 bg-gray-100 border rounded shadow"
+			data-netlify="true"
+			method="POST"
+			name="bid-form"
 		>
-			<input type="hidden" name="form-name" defaultValue="bid-form" />
+			<input defaultValue="bid-form" name="form-name" type="hidden" />
 			<div className="md:flex">
 				<div className="w-full p-3 pb-0 space-y-4 md:w-1/2">
 					<div>
 						<label className="grid gap-2" htmlFor="first-name">
 							<div>Name</div>
 							<input
+								autoComplete="given-name"
+								className="w-full rounded border-gray-300"
 								id="first-name"
 								name="first-name"
-								autoComplete="given-name"
 								placeholder="Johnny"
 								required
 								type="text"
-								className="w-full rounded border-gray-300"
 							/>
 							<input
-								type="text"
+								autoComplete="family-name"
+								className="rounded border-gray-300"
 								id="last-name"
 								name="last-name"
-								autoComplete="family-name"
 								placeholder="Appleseed"
 								required
-								className="rounded border-gray-300"
+								type="text"
 							/>
 						</label>
 					</div>
@@ -39,21 +39,21 @@ export function BiddingForm() {
 						<label className="grid gap-2" htmlFor="address-line1">
 							<div>Address</div>
 							<input
+								autoComplete="address-line1"
+								className="rounded border-gray-300"
 								id="address-line1"
 								name="address-line1"
-								autoComplete="address-line1"
 								placeholder="35 Merrigal Road"
-								type="text"
 								required
-								className="rounded border-gray-300"
+								type="text"
 							/>
 							<input
-								type="text"
 								autoComplete="address-line2"
+								className="rounded border-gray-300"
 								name="address-line2"
 								placeholder="Port Macquarie NSW 2444"
 								required
-								className="rounded border-gray-300"
+								type="text"
 							/>
 						</label>
 					</div>
@@ -62,13 +62,13 @@ export function BiddingForm() {
 							<label className="grid gap-2" htmlFor="phone-number">
 								<div>Phone number</div>
 								<input
-									type="tel"
+									autoComplete="tel"
+									className="rounded border-gray-300"
 									id="phone-number"
 									name="phone-number"
-									autoComplete="tel"
 									placeholder="0400 000 000"
 									required
-									className="rounded border-gray-300"
+									type="tel"
 								/>
 							</label>
 						</div>
@@ -78,13 +78,13 @@ export function BiddingForm() {
 							<label className="grid gap-2" htmlFor="email-address">
 								<div>Email address</div>
 								<input
-									type="email"
+									autoComplete="email"
+									className="rounded border-gray-300"
 									id="email-address"
 									name="email-address"
-									autoComplete="email"
 									placeholder="your.name@example.com"
 									required
-									className="rounded border-gray-300"
+									type="email"
 								/>
 							</label>
 						</div>
@@ -96,13 +96,13 @@ export function BiddingForm() {
 							<label className="grid gap-2" htmlFor="lot-number">
 								<div>Lot number</div>
 								<input
-									type="text"
+									autoComplete="off"
+									className="rounded border-gray-300"
 									id="lot-number"
 									name="lot-number"
-									autoComplete="off"
 									placeholder="10123"
 									required
-									className="rounded border-gray-300"
+									type="text"
 								/>
 							</label>
 						</div>
@@ -110,13 +110,13 @@ export function BiddingForm() {
 							<label className="grid gap-2" htmlFor="lot-description">
 								<div>Lot description</div>
 								<input
-									type="text"
+									autoComplete="off"
+									className="rounded border-gray-300"
 									id="lot-description"
 									name="lot-description"
-									autoComplete="off"
 									placeholder="Acoustic guitar"
 									required
-									className="rounded border-gray-300"
+									type="text"
 								/>
 							</label>
 						</div>
@@ -126,9 +126,9 @@ export function BiddingForm() {
 								<div className="flex items-center border rounded bg-grey-lighter">
 									<div className="flex-auto px-4 rounded-l">$</div>
 									<input
+										autoComplete="off"
 										className="flex-auto border-y-0 border-gray-200 block w-full px-4 py-3 bg-white border-l border-r shadow-inner appearance-none text-grey-darker"
 										id="bid-price"
-										autoComplete="off"
 										name="bid-price"
 										placeholder="100"
 										required
@@ -146,11 +146,11 @@ export function BiddingForm() {
 								<div>Message</div>
 								<textarea
 									className="w-full border-gray-300 h-48 p-3 border rounded shadow-inner text-grey-darker"
+									defaultValue=""
 									id="message"
 									name="message"
-									spellCheck
 									placeholder="Optional — please leave blank unless you have a very good reason"
-									defaultValue=""
+									spellCheck
 								/>
 							</label>
 						</div>
@@ -160,9 +160,8 @@ export function BiddingForm() {
 			<div className="p-3">
 				<TermsAndConditions />
 				<div className="w-full mt-2">
-					{/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
 					<label className="inline-flex items-center">
-						<input type="checkbox" defaultChecked />
+						<input defaultChecked type="checkbox" />
 						<span className="pl-2">
 							I agree to the{' '}
 							<strong className="text-grey-darker">
@@ -179,8 +178,8 @@ export function BiddingForm() {
 				</div>
 				<div className="max-w-sm mx-auto mt-2 text-xl">
 					<button
-						type="submit"
 						className="inline-block w-full px-4 py-2 font-medium text-center text-white bg-blue-800 border-b-8 border-blue-900 rounded"
+						type="submit"
 					>
 						Submit bid
 					</button>

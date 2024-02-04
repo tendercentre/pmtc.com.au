@@ -22,9 +22,9 @@ export function Card({ copy, heading, href }: CardProps) {
 				{copy}
 				<div className="pt-12 mt-auto">
 					<NextLink
-						href={href}
 						aria-labelledby={headingId}
 						className="inline-block w-full px-4 py-2 font-medium text-center text-white bg-blue-800 border-b-8 border-blue-900 rounded"
+						href={href}
 					>
 						Read more
 					</NextLink>

@@ -9,7 +9,7 @@ export function Map() {
 
 	return (
 		<article className="px-4 py-6 bg-white border rounded-md shadow">
-			<div ref={ref} className="overflow-hidden rounded aspect-w-16 aspect-h-9">
+			<div className="overflow-hidden rounded aspect-w-16 aspect-h-9" ref={ref}>
 				{inView && (
 					<iframe
 						allowFullScreen

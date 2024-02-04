@@ -22,12 +22,12 @@ function Hero() {
 		<article className="relative overflow-hidden text-white bg-blue-800 border-b-8 border-blue-900 rounded">
 			<div className="absolute inset-0">
 				<NextImage
-					src="/hero.jpg"
-					width="960"
-					height="539"
-					loading="lazy"
 					alt=""
 					className="absolute inset-0 object-cover w-full h-full"
+					height={539}
+					loading="lazy"
+					src="/hero.jpg"
+					width={960}
 				/>
 			</div>
 			<div className="relative bg-blue-900 bg-opacity-75">
@@ -137,7 +137,7 @@ function Contact() {
 					<div>
 						<dt className="font-bold">Phone</dt>
 						<dd>
-							<a href={`tel:${config.phone}`} className="font-bold underline">
+							<a className="font-bold underline" href={`tel:${config.phone}`}>
 								{config.phone}
 							</a>
 						</dd>
@@ -146,8 +146,8 @@ function Contact() {
 						<dt className="font-bold">Email</dt>
 						<dd>
 							<a
-								href={`mailto:${config.email}`}
 								className="font-bold underline"
+								href={`mailto:${config.email}`}
 							>
 								{config.email}
 							</a>
@@ -157,8 +157,8 @@ function Contact() {
 						<dt className="font-bold">Address</dt>
 						<dd>
 							<a
-								href={config.address.googleMaps}
 								className="font-bold underline"
+								href={config.address.googleMaps}
 							>
 								{config.address.line1}, {config.address.line2}
 							</a>
@@ -172,7 +172,7 @@ function Contact() {
 			<div className="px-4 py-6 bg-gray-200 border rounded shadow">
 				<div className="flex items-center space-x-4">
 					{config.socialLinks.map((socialLink) => (
-						<a key={socialLink.url} href={socialLink.url}>
+						<a href={socialLink.url} key={socialLink.url}>
 							<span className="sr-only">{socialLink.label}</span>
 							<socialLink.icon className="w-8 text-blue-800" />
 						</a>

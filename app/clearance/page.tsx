@@ -27,7 +27,7 @@ export default function ClearanceSolutionsPage() {
 					</p>
 					<p>
 						If you would like to employ our services, please contact us on{' '}
-						<a href={`tel:${config.phone}`} className="inline-block">
+						<a className="inline-block" href={`tel:${config.phone}`}>
 							{config.phone}
 						</a>{' '}
 						during business hours.
