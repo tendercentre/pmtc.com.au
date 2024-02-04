@@ -2,6 +2,7 @@ import formsPlugin from '@tailwindcss/forms';
 import typographyPlugin from '@tailwindcss/typography';
 import { type Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
+import { type PluginAPI } from 'tailwindcss/types/config';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -38,6 +39,22 @@ module.exports = {
 				display: ['var(--oswald)', ...defaultTheme.fontFamily.sans],
 				sans: ['var(--roboto)', ...defaultTheme.fontFamily.sans],
 			},
+			typography: (theme: PluginAPI['theme']) => ({
+				DEFAULT: {
+					css: {
+						thead: {
+							borderBottomWidth: '0px',
+						},
+						'th p:first-child': {
+							margin: '0px',
+						},
+						'td p:first-child': {
+							color: theme('colors.gray.500'),
+							margin: '0px',
+						},
+					},
+				},
+			}),
 		},
 	},
 	plugins: [

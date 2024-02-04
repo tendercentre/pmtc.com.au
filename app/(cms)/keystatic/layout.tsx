@@ -1,9 +1,8 @@
-import { KeystaticApp } from './keystatic';
+import { KeystaticApp } from './_components';
 
-export default function Layout() {
+export default function RootLayout() {
 	return (
-		<html>
-			<head />
+		<html lang="en">
 			<body>
 				<KeystaticApp />
 			</body>

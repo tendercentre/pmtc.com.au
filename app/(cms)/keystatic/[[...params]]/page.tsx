@@ -1,7 +1,9 @@
-import { makeRouteHandler } from '@keystatic/next/route-handler';
+import { type Metadata } from 'next';
 
-import config from '../../../../keystatic.config';
+export const metadata = {
+	title: 'Keystatic',
+} satisfies Metadata;
 
-export const { POST, GET } = makeRouteHandler({
-	config,
-});
+export default function Page() {
+	return null;
+}
