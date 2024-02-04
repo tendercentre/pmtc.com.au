@@ -1,9 +1,19 @@
 import { collection, config, fields } from '@keystatic/core';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 export default config({
-	storage: {
-		kind: 'local',
-	},
+	storage: isProd
+		? {
+				kind: 'github',
+				repo: {
+					owner: 'tendercentre',
+					name: 'pmtc.com.au',
+				},
+			}
+		: {
+				kind: 'local',
+			},
 	singletons: {
 		termsAndConditions: {
 			label: 'Terms and Conditions',
