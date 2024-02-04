@@ -6,7 +6,7 @@ import { type Metadata } from 'next';
 import { Oswald, Roboto } from 'next/font/google';
 import NextLink from 'next/link';
 
-import { config } from '../config';
+import { config } from './config';
 
 const roboto = Roboto({
 	weight: ['400', '500', '700'],

@@ -2,7 +2,7 @@
 
 import { useInView } from 'react-intersection-observer';
 
-import { config } from '../../config';
+import { config } from '../config';
 
 export function Map() {
 	const { ref, inView } = useInView();

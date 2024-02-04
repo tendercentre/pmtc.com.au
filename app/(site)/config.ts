@@ -1,4 +1,4 @@
-import { FacebookIcon, InstagramIcon } from './(site)/_components/vectors';
+import { FacebookIcon, InstagramIcon } from './_components/vectors';
 
 const facebookUrl = 'https://www.facebook.com/ThetendercentrePMQ';
 const instagramUrl = 'https://www.instagram.com/portmacquarie_tendercentre';
