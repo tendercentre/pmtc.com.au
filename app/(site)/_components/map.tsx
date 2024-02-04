@@ -9,7 +9,7 @@ export function Map() {
 
 	return (
 		<article className="rounded-md border bg-white px-4 py-6 shadow">
-			<div className="aspect-video relative overflow-hidden rounded" ref={ref}>
+			<div className="relative aspect-video overflow-hidden rounded" ref={ref}>
 				{inView && (
 					<iframe
 						allowFullScreen
