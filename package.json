@@ -17,6 +17,8 @@
 		"start": "next start"
 	},
 	"dependencies": {
+		"@keystatic/core": "^0.3.12",
+		"@keystatic/next": "^3.0.0",
 		"@next/third-parties": "^14.1.0",
 		"next": "14.1.0",
 		"react": "^18",
