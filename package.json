@@ -5,9 +5,15 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "next build",
+		"check": "pnpm run check:format && pnpm run check:lint && pnpm run check:types",
+		"check:format": "pnpm prettier . --cache --check",
+		"check:lint": "eslint . --max-warnings 0 --report-unused-disable-directives",
+		"check:types": "tsc --noEmit",
 		"dev": "next dev",
 		"export": "next export",
-		"lint": "next lint",
+		"fix": "pnpm fix:lint && pnpm fix:format",
+		"fix:format": "pnpm prettier . --cache --write",
+		"fix:lint": "eslint . --max-warnings 0 --report-unused-disable-directives --fix",
 		"start": "next start"
 	},
 	"dependencies": {
