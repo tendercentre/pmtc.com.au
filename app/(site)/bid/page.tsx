@@ -2,6 +2,8 @@ import { DocumentRenderer } from '@keystatic/core/renderer';
 import { type Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
+import { Field, Input, Textarea } from '../_components/field';
+import { Fieldset } from '../_components/fieldset';
 import { documentRenderers } from '../_components/renderers';
 import { reader } from '../reader';
 
@@ -52,150 +54,118 @@ function BiddingForm() {
 		>
 			<input defaultValue="bid-form" name="form-name" type="hidden" />
 			<div className="md:flex">
-				<div className="w-full space-y-4 p-3 pb-0 md:w-1/2">
-					<div>
-						<label className="grid gap-2" htmlFor="first-name">
-							<div>Name</div>
-							<input
+				<div className="flex w-full flex-1 flex-col gap-4 p-3">
+					<Fieldset legend="Name">
+						<Field label="First name" labelVisibility="hidden">
+							<Input
 								autoComplete="given-name"
-								className="w-full rounded border-gray-300"
-								id="first-name"
 								name="first-name"
 								placeholder="Johnny"
 								required
-								type="text"
 							/>
-							<input
+						</Field>
+						<Field label="Last name" labelVisibility="hidden">
+							<Input
 								autoComplete="family-name"
-								className="rounded border-gray-300"
-								id="last-name"
 								name="last-name"
 								placeholder="Appleseed"
 								required
-								type="text"
 							/>
-						</label>
-					</div>
-					<div>
-						<label className="grid gap-2" htmlFor="address-line1">
-							<div>Address</div>
-							<input
+						</Field>
+					</Fieldset>
+
+					<Fieldset legend="Address">
+						<Field label="Line 1" labelVisibility="hidden">
+							<Input
 								autoComplete="address-line1"
-								className="rounded border-gray-300"
-								id="address-line1"
 								name="address-line1"
 								placeholder="35 Merrigal Road"
 								required
-								type="text"
 							/>
-							<input
+						</Field>
+						<Field label="Line 2" labelVisibility="hidden">
+							<Input
 								autoComplete="address-line2"
-								className="rounded border-gray-300"
 								name="address-line2"
 								placeholder="Port Macquarie NSW 2444"
 								required
-								type="text"
 							/>
-						</label>
-					</div>
-					<div className="form-row">
-						<div className="form-column">
-							<label className="grid gap-2" htmlFor="phone-number">
-								<div>Phone number</div>
-								<input
-									autoComplete="tel"
-									className="rounded border-gray-300"
-									id="phone-number"
-									name="phone-number"
-									placeholder="0400 000 000"
-									required
-									type="tel"
-								/>
-							</label>
-						</div>
-					</div>
-					<div className="form-row">
-						<div className="form-column">
-							<label className="grid gap-2" htmlFor="email-address">
-								<div>Email address</div>
-								<input
-									autoComplete="email"
-									className="rounded border-gray-300"
-									id="email-address"
-									name="email-address"
-									placeholder="your.name@example.com"
-									required
-									type="email"
-								/>
-							</label>
-						</div>
-					</div>
+						</Field>
+					</Fieldset>
+
+					<Field label="Phone number">
+						<Input
+							autoComplete="tel"
+							name="phone-number"
+							placeholder="0400 000 000"
+							required
+							type="tel"
+						/>
+					</Field>
+
+					<Field label="Email address">
+						<Input
+							autoComplete="email"
+							name="email-address"
+							placeholder="your.name@example.com"
+							required
+							type="email"
+						/>
+					</Field>
 				</div>
-				<div className="w-full p-3 pb-0 md:w-1/2">
-					<div className="space-y-4">
-						<div className="form-column">
-							<label className="grid gap-2" htmlFor="lot-number">
-								<div>Lot number</div>
-								<input
-									autoComplete="off"
-									className="rounded border-gray-300"
-									id="lot-number"
-									name="lot-number"
-									placeholder="10123"
-									required
-									type="text"
-								/>
-							</label>
-						</div>
-						<div className="form-column">
-							<label className="grid gap-2" htmlFor="lot-description">
-								<div>Lot description</div>
-								<input
-									autoComplete="off"
-									className="rounded border-gray-300"
-									id="lot-description"
-									name="lot-description"
-									placeholder="Acoustic guitar"
-									required
-									type="text"
-								/>
-							</label>
-						</div>
-						<div className="form-column pb-1">
-							<label className="grid gap-2" htmlFor="bid-price">
-								<div>Bid price</div>
-								<div className="bg-grey-lighter flex items-center rounded border">
-									<div className="flex-auto rounded-l px-4">$</div>
-									<input
-										autoComplete="off"
-										className="text-grey-darker block w-full flex-auto appearance-none border-y-0 border-l border-r border-gray-200 bg-white px-4 py-3 shadow-inner"
-										id="bid-price"
-										name="bid-price"
-										placeholder="100"
-										required
-									/>
-									<div className="flex-auto rounded-r px-4">.00</div>
-								</div>
-							</label>
-							<small className="text-grey-darker">
-								(A buyer's premium of 11% + $3.30 is added to this offer for
-								successful bids.)
-							</small>
-						</div>
-						<div className="form-column">
-							<label className="grid gap-2" htmlFor="message">
-								<div>Message</div>
-								<textarea
-									className="text-grey-darker h-48 w-full rounded border border-gray-300 p-3 shadow-inner"
-									defaultValue=""
-									id="message"
-									name="message"
-									placeholder="Optional — please leave blank unless you have a very good reason"
-									spellCheck
-								/>
-							</label>
-						</div>
-					</div>
+				<div className="flex w-full flex-1 flex-col gap-4 p-3">
+					<Field label="Lot number">
+						<Input
+							autoComplete="off"
+							className="rounded border-gray-300"
+							name="lot-number"
+							placeholder="10123"
+							required
+						/>
+					</Field>
+
+					<Field label="Lot description">
+						<Input
+							autoComplete="off"
+							className="rounded border-gray-300"
+							name="lot-description"
+							placeholder="Acoustic guitar"
+							required
+							type="text"
+						/>
+					</Field>
+
+					<Field label="Bid price">
+						<small className="text-grey-darker" id="buyer-premium">
+							(A buyer's premium of 11% + $3.30 is added to this offer for
+							successful bids.)
+						</small>
+						<span className="flex rounded border">
+							<span className="flex items-center rounded-l border-r px-4">
+								$
+							</span>
+							<Input
+								aria-describedby="buyer-premium"
+								autoComplete="off"
+								className="flex-1 !rounded-none border-none"
+								name="bid-price"
+								placeholder="100"
+								required
+							/>
+							<span className="flex items-center rounded-r border-l px-4">
+								.00
+							</span>
+						</span>
+					</Field>
+					<Field label="Message">
+						<Textarea
+							className="h-24"
+							name="message"
+							placeholder="Optional — please leave blank unless you have a good reason"
+							rows={3}
+							spellCheck
+						/>
+					</Field>
 				</div>
 			</div>
 			<div className="p-3">
