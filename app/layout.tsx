@@ -1,5 +1,6 @@
 import './index.css';
 
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { clsx } from 'clsx';
 import { type Metadata } from 'next';
 import { Oswald, Roboto } from 'next/font/google';
@@ -59,6 +60,7 @@ export default function RootLayout({
 				<main className="flex-1">{children}</main>
 				<Footer />
 			</body>
+			<GoogleAnalytics gaId="UA-111452383-1" />
 		</html>
 	);
 }
