@@ -236,7 +236,7 @@ async function Terms() {
 	return (
 		<>
 			<h2>Terms &amp; Conditions</h2>
-			<div className="prose h-64 max-w-none overflow-y-scroll rounded border bg-white pt-3 text-sm shadow-inner">
+			<div className="prose h-64 max-w-none overflow-y-scroll rounded border bg-white px-4 pt-3 text-sm shadow-inner">
 				<DocumentRenderer
 					document={await termsAndConditions.content()}
 					renderers={documentRenderers}
