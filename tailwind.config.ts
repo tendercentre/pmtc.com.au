@@ -1,4 +1,3 @@
-import aspectRatioPlugin from '@tailwindcss/aspect-ratio';
 import formsPlugin from '@tailwindcss/forms';
 import typographyPlugin from '@tailwindcss/typography';
 import { type Config } from 'tailwindcss';
@@ -45,9 +44,6 @@ module.exports = {
 		},
 	},
 	plugins: [
-		/** @see https://github.com/tailwindlabs/tailwindcss-aspect-ratio#readme */
-		aspectRatioPlugin,
-
 		/** @see https://github.com/tailwindlabs/tailwindcss-typography#readme */
 		typographyPlugin,
 
