@@ -11,7 +11,6 @@
 		"check:lint": "eslint . --cache --cache-location=node_modules/.cache/eslint --max-warnings 0 --report-unused-disable-directives",
 		"check:types": "tsc --noEmit",
 		"dev": "next dev",
-		"export": "next export",
 		"fix": "pnpm fix:lint && pnpm fix:format",
 		"fix:format": "pnpm prettier . --cache --write",
 		"fix:lint": "eslint . --cache --cache-location=node_modules/.cache/eslint --max-warnings 0 --report-unused-disable-directives --fix",
