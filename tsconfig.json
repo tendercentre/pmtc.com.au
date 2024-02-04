@@ -29,6 +29,7 @@
 		"target": "ES2022",
 	},
 	"include": [
+		"./next.config.mjs",
 		"./postcss.config.cjs",
 		".next/types/**/*.ts",
 		"**/*.ts",
