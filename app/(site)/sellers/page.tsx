@@ -1,7 +1,7 @@
 import { type Metadata } from 'next';
 import NextLink from 'next/link';
 
-import { config } from '../config';
+import { config } from '../../config';
 
 export const metadata: Metadata = {
 	title: 'Sellers',

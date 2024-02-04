@@ -1,8 +1,8 @@
 import NextImage from 'next/image';
 
+import { config } from '../config';
 import { Card, type CardProps } from './_components/card';
 import { Map } from './_components/map';
-import { config } from './config';
 
 export default function IndexPage() {
 	return (

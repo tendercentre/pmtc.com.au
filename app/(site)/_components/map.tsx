@@ -2,14 +2,14 @@
 
 import { useInView } from 'react-intersection-observer';
 
-import { config } from '../config';
+import { config } from '../../config';
 
 export function Map() {
 	const { ref, inView } = useInView();
 
 	return (
 		<article className="rounded-md border bg-white px-4 py-6 shadow">
-			<div className="relative aspect-video overflow-hidden rounded" ref={ref}>
+			<div className="aspect-video relative overflow-hidden rounded" ref={ref}>
 				{inView && (
 					<iframe
 						allowFullScreen
