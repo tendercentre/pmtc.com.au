@@ -38,6 +38,8 @@
 			}
 		],
 		"@typescript-eslint/prefer-ts-expect-error": "off",
+		"react/jsx-sort-props": "warn",
+		"react/no-children-prop": "warn",
 		"react/no-unescaped-entities": "off"
 	}
 }
