@@ -7,7 +7,7 @@ import { config } from './config';
 export default function IndexPage() {
 	return (
 		<>
-			<div className="grid w-full max-w-5xl gap-6 px-4 py-6 mx-auto text-gray-800 bg-gray-200 rounded-md shadow-md sm:py-8 sm:px-6">
+			<div className="mx-auto grid w-full max-w-5xl gap-6 rounded-md bg-gray-200 px-4 py-6 text-gray-800 shadow-md sm:px-6 sm:py-8">
 				<Hero />
 				<Cards />
 				<Info />
@@ -19,11 +19,11 @@ export default function IndexPage() {
 
 function Hero() {
 	return (
-		<article className="relative overflow-hidden text-white bg-blue-800 border-b-8 border-blue-900 rounded">
+		<article className="relative overflow-hidden rounded border-b-8 border-blue-900 bg-blue-800 text-white">
 			<div className="absolute inset-0">
 				<NextImage
 					alt=""
-					className="absolute inset-0 object-cover w-full h-full"
+					className="absolute inset-0 h-full w-full object-cover"
 					height={539}
 					loading="lazy"
 					src="/hero.jpg"
@@ -31,7 +31,7 @@ function Hero() {
 				/>
 			</div>
 			<div className="relative bg-blue-900 bg-opacity-75">
-				<div className="relative w-full max-w-3xl px-4 py-20 mx-auto text-3xl text-center sm:px-6 lg:px-8">
+				<div className="relative mx-auto w-full max-w-3xl px-4 py-20 text-center text-3xl sm:px-6 lg:px-8">
 					<p>
 						We are the largest second-hand and consignment store on the Mid
 						North Coast.
@@ -101,11 +101,11 @@ function Info() {
 
 function Hours() {
 	return (
-		<article className="flex flex-col px-4 py-6 space-y-4 bg-white border rounded shadow">
-			<h2 className="text-2xl font-medium text-blue-800 uppercase font-display">
+		<article className="flex flex-col space-y-4 rounded border bg-white px-4 py-6 shadow">
+			<h2 className="font-display text-2xl font-medium uppercase text-blue-800">
 				Hours
 			</h2>
-			<div className="flex-1 px-4 py-6 bg-gray-200 border rounded shadow">
+			<div className="flex-1 rounded border bg-gray-200 px-4 py-6 shadow">
 				<h3 className="text-xl font-bold">General</h3>
 				<dl className="mt-4 space-y-4">
 					<div>
@@ -118,7 +118,7 @@ function Hours() {
 					</div>
 				</dl>
 			</div>
-			<div className="flex-1 px-4 py-6 bg-gray-200 border rounded shadow">
+			<div className="flex-1 rounded border bg-gray-200 px-4 py-6 shadow">
 				<h3 className="text-xl font-bold">Receiving</h3>
 				<div className="mt-4 font-bold">By appointment only</div>
 			</div>
@@ -128,11 +128,11 @@ function Hours() {
 
 function Contact() {
 	return (
-		<article className="px-4 py-6 space-y-4 bg-white border rounded shadow">
-			<h2 className="text-2xl font-medium text-blue-800 uppercase font-display">
+		<article className="space-y-4 rounded border bg-white px-4 py-6 shadow">
+			<h2 className="font-display text-2xl font-medium uppercase text-blue-800">
 				Contact
 			</h2>
-			<div className="px-4 py-6 bg-gray-200 border rounded shadow">
+			<div className="rounded border bg-gray-200 px-4 py-6 shadow">
 				<dl className="mt-4 space-y-4">
 					<div>
 						<dt className="font-bold">Phone</dt>
@@ -166,10 +166,10 @@ function Contact() {
 					</div>
 				</dl>
 			</div>
-			<h2 className="text-2xl font-medium text-blue-800 uppercase font-display">
+			<h2 className="font-display text-2xl font-medium uppercase text-blue-800">
 				Social
 			</h2>
-			<div className="px-4 py-6 bg-gray-200 border rounded shadow">
+			<div className="rounded border bg-gray-200 px-4 py-6 shadow">
 				<div className="flex items-center space-x-4">
 					{config.socialLinks.map((socialLink) => (
 						<a href={socialLink.url} key={socialLink.url}>

@@ -8,11 +8,11 @@ export const metadata: Metadata = {
 export default function NotFoundPage() {
 	return (
 		<>
-			<div className="w-full max-w-3xl mx-auto text-gray-800 bg-white rounded-md shadow-md">
-				<h1 className="py-2 text-3xl font-medium text-center text-blue-800 uppercase bg-gray-100 border-b font-display rounded-t-md">
+			<div className="mx-auto w-full max-w-3xl rounded-md bg-white text-gray-800 shadow-md">
+				<h1 className="rounded-t-md border-b bg-gray-100 py-2 text-center font-display text-3xl font-medium uppercase text-blue-800">
 					404: Page Not Found
 				</h1>
-				<div className="px-4 py-6 prose sm:py-8 sm:px-6">
+				<div className="prose px-4 py-6 sm:px-6 sm:py-8">
 					<p>Well that's weird...</p>
 					<p>It looks like this page doesn’t exist (yet?)</p>
 					<p>

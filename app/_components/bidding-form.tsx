@@ -4,14 +4,14 @@ export function BiddingForm() {
 	return (
 		<form
 			action="/success/"
-			className="w-full mx-auto mb-0 bg-gray-100 border rounded shadow"
+			className="mx-auto mb-0 w-full rounded border bg-gray-100 shadow"
 			data-netlify="true"
 			method="POST"
 			name="bid-form"
 		>
 			<input defaultValue="bid-form" name="form-name" type="hidden" />
 			<div className="md:flex">
-				<div className="w-full p-3 pb-0 space-y-4 md:w-1/2">
+				<div className="w-full space-y-4 p-3 pb-0 md:w-1/2">
 					<div>
 						<label className="grid gap-2" htmlFor="first-name">
 							<div>Name</div>
@@ -120,20 +120,20 @@ export function BiddingForm() {
 								/>
 							</label>
 						</div>
-						<div className="pb-1 form-column">
+						<div className="form-column pb-1">
 							<label className="grid gap-2" htmlFor="bid-price">
 								<div>Bid price</div>
-								<div className="flex items-center border rounded bg-grey-lighter">
-									<div className="flex-auto px-4 rounded-l">$</div>
+								<div className="bg-grey-lighter flex items-center rounded border">
+									<div className="flex-auto rounded-l px-4">$</div>
 									<input
 										autoComplete="off"
-										className="flex-auto border-y-0 border-gray-200 block w-full px-4 py-3 bg-white border-l border-r shadow-inner appearance-none text-grey-darker"
+										className="text-grey-darker block w-full flex-auto appearance-none border-y-0 border-l border-r border-gray-200 bg-white px-4 py-3 shadow-inner"
 										id="bid-price"
 										name="bid-price"
 										placeholder="100"
 										required
 									/>
-									<div className="flex-auto px-4 rounded-r">.00</div>
+									<div className="flex-auto rounded-r px-4">.00</div>
 								</div>
 							</label>
 							<small className="text-grey-darker">
@@ -145,7 +145,7 @@ export function BiddingForm() {
 							<label className="grid gap-2" htmlFor="message">
 								<div>Message</div>
 								<textarea
-									className="w-full border-gray-300 h-48 p-3 border rounded shadow-inner text-grey-darker"
+									className="text-grey-darker h-48 w-full rounded border border-gray-300 p-3 shadow-inner"
 									defaultValue=""
 									id="message"
 									name="message"
@@ -159,7 +159,7 @@ export function BiddingForm() {
 			</div>
 			<div className="p-3">
 				<TermsAndConditions />
-				<div className="w-full mt-2">
+				<div className="mt-2 w-full">
 					<label className="inline-flex items-center">
 						<input defaultChecked type="checkbox" />
 						<span className="pl-2">
@@ -176,9 +176,9 @@ export function BiddingForm() {
 						<input name="bot-field" />
 					</label>
 				</div>
-				<div className="max-w-sm mx-auto mt-2 text-xl">
+				<div className="mx-auto mt-2 max-w-sm text-xl">
 					<button
-						className="inline-block w-full px-4 py-2 font-medium text-center text-white bg-blue-800 border-b-8 border-blue-900 rounded"
+						className="inline-block w-full rounded border-b-8 border-blue-900 bg-blue-800 px-4 py-2 text-center font-medium text-white"
 						type="submit"
 					>
 						Submit bid

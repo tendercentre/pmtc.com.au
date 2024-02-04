@@ -53,7 +53,7 @@ export default function RootLayout({
 			className={clsx(oswald.variable, roboto.variable, 'antialiased')}
 			lang="en-AU"
 		>
-			<body className="flex flex-col min-h-svh font-sans text-white bg-blue-900">
+			<body className="flex min-h-svh flex-col bg-blue-900 font-sans text-white">
 				<Nav />
 				<Header />
 				<main className="flex-1">{children}</main>
@@ -66,11 +66,11 @@ export default function RootLayout({
 function Nav() {
 	return (
 		<nav>
-			<ul className="flex items-center justify-around w-full max-w-5xl mx-auto">
+			<ul className="mx-auto flex w-full max-w-5xl items-center justify-around">
 				{config.siteNavigation.map((navItem) => (
 					<li className="flex-1" key={navItem.slug}>
 						<NextLink
-							className="inline-block w-full py-4 font-medium text-center transition duration-150 ease-in-out border-t-4 border-transparent hover:border-yellow-200 hover:bg-blue-800"
+							className="inline-block w-full border-t-4 border-transparent py-4 text-center font-medium transition duration-150 ease-in-out hover:border-yellow-200 hover:bg-blue-800"
 							href={navItem.slug}
 						>
 							{navItem.label}
@@ -86,10 +86,10 @@ function Header() {
 	return (
 		<header>
 			<div className="py-20 text-center">
-				<h1 className="text-5xl font-medium text-yellow-200 uppercase font-display">
+				<h1 className="font-display text-5xl font-medium uppercase text-yellow-200">
 					<NextLink href="/">{config.title}</NextLink>
 				</h1>
-				<p className="text-2xl italic font-medium">{config.tagline}</p>
+				<p className="text-2xl font-medium italic">{config.tagline}</p>
 			</div>
 		</header>
 	);
@@ -97,8 +97,8 @@ function Header() {
 
 function Footer() {
 	return (
-		<footer className="w-full mt-20 bg-white">
-			<div className="max-w-5xl px-4 py-12 mx-auto sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+		<footer className="mt-20 w-full bg-white">
+			<div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
 				<div className="flex justify-center space-x-6 md:order-2">
 					{config.socialLinks.map((socialLink) => (
 						<a
@@ -107,12 +107,12 @@ function Footer() {
 							key={socialLink.url}
 						>
 							<span className="sr-only">{socialLink.label}</span>
-							<socialLink.icon className="w-6 h-6" />
+							<socialLink.icon className="h-6 w-6" />
 						</a>
 					))}
 				</div>
-				<div className="mt-8 md:mt-0 md:order-1">
-					<p className="text-base leading-6 text-center text-gray-600">
+				<div className="mt-8 md:order-1 md:mt-0">
+					<p className="text-center text-base leading-6 text-gray-600">
 						© {new Date().getFullYear()} {config.title}. All rights reserved.
 					</p>
 				</div>

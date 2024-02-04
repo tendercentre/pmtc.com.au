@@ -2,7 +2,7 @@ export function TermsAndConditions() {
 	return (
 		<div>
 			<h3>Terms &amp; Conditions</h3>
-			<div className="h-64 overflow-y-scroll scrolling-touch text-sm prose-sm bg-white border rounded shadow-inner">
+			<div className="prose-sm h-64 overflow-y-scroll rounded border bg-white text-sm shadow-inner">
 				<ol>
 					<li>
 						<p>

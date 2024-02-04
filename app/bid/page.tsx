@@ -9,12 +9,12 @@ export const metadata: Metadata = {
 export default function BidPage() {
 	return (
 		<>
-			<div className="w-full max-w-3xl mx-auto text-gray-800 bg-white rounded-md shadow-md">
-				<h1 className="py-2 text-3xl font-medium text-center text-blue-800 uppercase bg-gray-100 border-b font-display rounded-t-md">
+			<div className="mx-auto w-full max-w-3xl rounded-md bg-white text-gray-800 shadow-md">
+				<h1 className="rounded-t-md border-b bg-gray-100 py-2 text-center font-display text-3xl font-medium uppercase text-blue-800">
 					Online Bid
 				</h1>
-				<div className="px-4 py-6 sm:py-8 sm:px-6">
-					<div className="mb-6 prose">
+				<div className="px-4 py-6 sm:px-6 sm:py-8">
+					<div className="prose mb-6">
 						<p className="lead">
 							To submit an online bid, please fill in the form below:
 						</p>

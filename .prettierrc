@@ -5,7 +5,8 @@
 	"importOrderTypeScriptVersion": "5.0.0",
 	"plugins": [
 		"prettier-plugin-packagejson",
-		"@ianvs/prettier-plugin-sort-imports"
+		"@ianvs/prettier-plugin-sort-imports",
+		"prettier-plugin-tailwindcss"
 	],
 	"singleQuote": true,
 	"useTabs": true

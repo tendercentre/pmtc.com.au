@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 export default function SellersPage() {
 	return (
 		<>
-			<div className="w-full max-w-3xl mx-auto text-gray-800 bg-white rounded-md shadow-md">
-				<h1 className="py-2 text-3xl font-medium text-center text-blue-800 uppercase bg-gray-100 border-b font-display rounded-t-md">
+			<div className="mx-auto w-full max-w-3xl rounded-md bg-white text-gray-800 shadow-md">
+				<h1 className="rounded-t-md border-b bg-gray-100 py-2 text-center font-display text-3xl font-medium uppercase text-blue-800">
 					Sellers
 				</h1>
-				<div className="px-4 py-6 text-lg prose sm:py-8 sm:px-6">
+				<div className="prose px-4 py-6 text-lg sm:px-6 sm:py-8">
 					<p>We receive new stock weekdays from 9:00 am — 4:30 pm.</p>
 					<p>
 						It’s free to put in, and we’ll keep it on display for you for up to
@@ -35,36 +35,36 @@ export default function SellersPage() {
 								<table className="min-w-full divide-y divide-gray-200">
 									<thead>
 										<tr>
-											<th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase bg-gray-50">
+											<th className="bg-gray-50 px-6 py-3 text-left text-xs font-medium uppercase leading-4 tracking-wider text-gray-500">
 												Sale price
 											</th>
-											<th className="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase bg-gray-50">
+											<th className="bg-gray-50 px-6 py-3 text-left text-xs font-medium uppercase leading-4 tracking-wider text-gray-500">
 												Commission rate
 											</th>
 										</tr>
 									</thead>
-									<tbody className="bg-white divide-y divide-gray-200">
+									<tbody className="divide-y divide-gray-200 bg-white">
 										<tr>
-											<td className="px-6 py-4 text-sm font-medium leading-5 whitespace-no-wrap">
+											<td className="whitespace-no-wrap px-6 py-4 text-sm font-medium leading-5">
 												$0 – $499
 											</td>
-											<td className="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap">
+											<td className="whitespace-no-wrap px-6 py-4 text-sm leading-5 text-gray-500">
 												22%
 											</td>
 										</tr>
 										<tr>
-											<td className="px-6 py-4 text-sm font-medium leading-5 whitespace-no-wrap">
+											<td className="whitespace-no-wrap px-6 py-4 text-sm font-medium leading-5">
 												$500 – $899
 											</td>
-											<td className="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap">
+											<td className="whitespace-no-wrap px-6 py-4 text-sm leading-5 text-gray-500">
 												20%
 											</td>
 										</tr>
 										<tr>
-											<td className="px-6 py-4 text-sm font-medium leading-5 whitespace-no-wrap">
+											<td className="whitespace-no-wrap px-6 py-4 text-sm font-medium leading-5">
 												$900 – $2999
 											</td>
-											<td className="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap">
+											<td className="whitespace-no-wrap px-6 py-4 text-sm leading-5 text-gray-500">
 												18%
 											</td>
 										</tr>
@@ -74,7 +74,7 @@ export default function SellersPage() {
 						</div>
 					</div>
 				</div>
-				<div className="px-4 py-6 text-lg prose sm:py-8 sm:px-6">
+				<div className="prose px-4 py-6 text-lg sm:px-6 sm:py-8">
 					<p>$3000 and over by negotiation.</p>
 					<p>Minimum commission per item is $3.30.</p>
 					<hr />

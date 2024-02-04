@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 export default function ClearanceSolutionsPage() {
 	return (
 		<>
-			<div className="w-full max-w-3xl mx-auto text-gray-800 bg-white rounded-md shadow-md">
-				<h1 className="py-2 text-3xl font-medium text-center text-blue-800 uppercase bg-gray-100 border-b font-display rounded-t-md">
+			<div className="mx-auto w-full max-w-3xl rounded-md bg-white text-gray-800 shadow-md">
+				<h1 className="rounded-t-md border-b bg-gray-100 py-2 text-center font-display text-3xl font-medium uppercase text-blue-800">
 					Clearance Solutions
 				</h1>
-				<div className="px-4 py-6 text-lg prose sm:py-8 sm:px-6">
+				<div className="prose px-4 py-6 text-lg sm:px-6 sm:py-8">
 					<p>
 						At the Port Macquarie Tender Centre, we understand the logistical
 						and emotional challenges involved in downsizing a home or clearing a

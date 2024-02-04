@@ -11,19 +11,19 @@ export function Card({ copy, heading, href }: CardProps) {
 	const headingId = useId();
 
 	return (
-		<div className="flex flex-col bg-white border rounded shadow">
+		<div className="flex flex-col rounded border bg-white shadow">
 			<h2
-				className="py-2 text-2xl font-medium text-center text-blue-800 uppercase bg-gray-100 font-display rounded-t-md"
+				className="rounded-t-md bg-gray-100 py-2 text-center font-display text-2xl font-medium uppercase text-blue-800"
 				id={headingId}
 			>
 				{heading}
 			</h2>
-			<div className="flex flex-col flex-1 px-4 py-6 border-t">
+			<div className="flex flex-1 flex-col border-t px-4 py-6">
 				{copy}
-				<div className="pt-12 mt-auto">
+				<div className="mt-auto pt-12">
 					<NextLink
 						aria-labelledby={headingId}
-						className="inline-block w-full px-4 py-2 font-medium text-center text-white bg-blue-800 border-b-8 border-blue-900 rounded"
+						className="inline-block w-full rounded border-b-8 border-blue-900 bg-blue-800 px-4 py-2 text-center font-medium text-white"
 						href={href}
 					>
 						Read more
