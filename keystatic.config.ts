@@ -15,6 +15,15 @@ export default config({
 				kind: 'local',
 			},
 	singletons: {
+		catalogue: {
+			label: 'Catalogue',
+			path: 'public/catalogue',
+			schema: {
+				file: fields.file({
+					label: 'File',
+				}),
+			},
+		},
 		termsAndConditions: {
 			label: 'Terms and Conditions',
 			entryLayout: 'content',

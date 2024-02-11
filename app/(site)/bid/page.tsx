@@ -26,7 +26,7 @@ export default function BidPage() {
 						<p className="lead">
 							You will need to know the lot number of the item you are bidding
 							on,{' '}
-							<a href="/catalogue.pdf" target="_blank">
+							<a href="/catalogue" target="_blank">
 								you can use our catalogue for reference.
 							</a>
 						</p>

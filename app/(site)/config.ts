@@ -35,7 +35,7 @@ export const config = {
 		},
 		{
 			label: 'Catalogue',
-			slug: '/catalogue.pdf',
+			slug: '/catalogue',
 		},
 		{
 			label: 'Bid',
