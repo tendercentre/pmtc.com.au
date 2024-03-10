@@ -9,8 +9,8 @@ dependencies:
     specifier: ^0.4.0
     version: 0.4.0(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
   '@keystatic/next':
-    specifier: ^3.0.0
-    version: 3.0.0(@keystatic/core@0.4.0)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^5.0.0
+    version: 5.0.0(@keystatic/core@0.4.0)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0)
   '@next/third-parties':
     specifier: ^14.1.0
     version: 14.1.0(next@14.1.0)(react@18.2.0)
@@ -774,8 +774,8 @@ packages:
       - supports-color
     dev: false
 
-  /@keystatic/next@3.0.0(@keystatic/core@0.4.0)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-6snsE7mQDHYxuZzjjZrlRvAKTLbDp3+sCVjz8PsltHPwbJuYhs1WaDw66b8on2XKiUXRF6qRIh2nyXZ2d1K30g==}
+  /@keystatic/next@5.0.0(@keystatic/core@0.4.0)(next@14.1.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-aacEMkrSbXrhC/obKTPEbcVa1yC9POmpd8lfXNGVadSRUsoG5O+brULc1NeVeHe7MMS/PkhNzhIpWkApCf5Qhw==}
     peerDependencies:
       '@keystatic/core': '*'
       next: 13 || 14
