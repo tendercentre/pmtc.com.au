@@ -1,6 +1,6 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"automerge": false,
+	"automerge": true,
 	"dependencyDashboard": true,
 	"extends": ["config:recommended", "schedule:earlyMondays"],
 	"internalChecksFilter": "strict",
@@ -14,16 +14,20 @@
 		{
 			"description": "Automatically merge minor and patch-level updates",
 			"matchUpdateTypes": ["minor", "patch", "digest"],
-			"automerge": false,
+			"automerge": true,
 			"automergeType": "branch"
-		},
-		{
-			"groupName": "react",
-			"matchPackageNames": ["react", "react-dom"]
 		},
 		{
 			"groupName": "eslint",
 			"matchPackagePatterns": ["eslint*"]
+		},
+		{
+			"groupName": "keystatic",
+			"matchPackagePatterns": ["@keystatic*"]
+		},
+		{
+			"groupName": "react",
+			"matchPackageNames": ["react", "react-dom"]
 		}
 	],
 	"postUpdateOptions": ["pnpmDedupe"],
