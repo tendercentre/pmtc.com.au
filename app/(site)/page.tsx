@@ -110,11 +110,15 @@ function Hours() {
 				<dl className="mt-4 space-y-4">
 					<div>
 						<dt className="font-bold">Monday – Friday</dt>
-						<dd>9:00am — 5:00pm</dd>
+						<dd>9:00am — 4:00pm</dd>
 					</div>
 					<div>
-						<dt className="font-bold">Weekends</dt>
+						<dt className="font-bold">Saturday</dt>
 						<dd>9:00am — 2:00pm</dd>
+					</div>
+					<div>
+						<dt className="font-bold">Sunday</dt>
+						<dd>Closed</dd>
 					</div>
 				</dl>
 			</div>
