@@ -1,0 +1,36 @@
+---
+import { siteConfig } from '../lib/site-config';
+import FacebookIcon from './icons/facebook.astro';
+import InstagramIcon from './icons/instagram.astro';
+
+const icons = { FacebookIcon, InstagramIcon };
+---
+
+<footer class="mt-20 w-full bg-white">
+	<div
+		class="mx-auto max-w-5xl px-4 py-12 sm:px-6 md:flex md:items-center md:justify-between lg:px-8"
+	>
+		<div class="flex justify-center space-x-6 md:order-2">
+			{
+				siteConfig.socialLinks.map((socialLink) => {
+					const Icon = icons[socialLink.iconName];
+					return (
+						<a
+							class="text-gray-500 transition duration-150 ease-in-out hover:text-gray-600"
+							href={socialLink.url}
+						>
+							<span class="sr-only">{socialLink.label}</span>
+							<Icon class="h-6 w-6" />
+						</a>
+					);
+				})
+			}
+		</div>
+		<div class="mt-8 md:order-1 md:mt-0">
+			<p class="text-center text-base leading-6 text-gray-600">
+				© {new Date().getFullYear()}
+				{siteConfig.title}. All rights reserved.
+			</p>
+		</div>
+	</div>
+</footer>

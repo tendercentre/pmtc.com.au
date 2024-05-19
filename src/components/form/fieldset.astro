@@ -1,0 +1,13 @@
+---
+type Props = astroHTML.JSX.DefinedIntrinsicElements['fieldset'] & {
+	legend: string;
+};
+
+const props = Astro.props;
+---
+
+<fieldset {...props} class:list={['flex flex-col gap-2', props.class]}>
+	<legend class="sr-only">{props.legend}</legend>
+	<span aria-hidden>{props.legend}</span>
+	<slot />
+</fieldset>

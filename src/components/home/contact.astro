@@ -1,0 +1,55 @@
+---
+import { siteConfig } from '../../lib/site-config';
+import FacebookIcon from '../icons/facebook.astro';
+import InstagramIcon from '../icons/instagram.astro';
+
+const icons = { FacebookIcon, InstagramIcon };
+---
+
+<article class="space-y-4 rounded border bg-white px-4 py-6 shadow">
+	<h2 class="font-display text-2xl font-medium uppercase text-blue-800">Contact</h2>
+	<div class="rounded border bg-gray-200 px-4 py-6 shadow">
+		<dl class="mt-4 space-y-4">
+			<div>
+				<dt class="font-bold">Phone</dt>
+				<dd>
+					<a class="font-bold underline" href={`tel:${siteConfig.phone}`}>
+						{siteConfig.phone}
+					</a>
+				</dd>
+			</div>
+			<div>
+				<dt class="font-bold">Email</dt>
+				<dd>
+					<a class="font-bold underline" href={`mailto:${siteConfig.email}`}>
+						{siteConfig.email}
+					</a>
+				</dd>
+			</div>
+			<div>
+				<dt class="font-bold">Address</dt>
+				<dd>
+					<a class="font-bold underline" href={siteConfig.address.googleMaps}>
+						{siteConfig.address.line1}, {siteConfig.address.line2}
+					</a>
+				</dd>
+			</div>
+		</dl>
+	</div>
+	<h2 class="font-display text-2xl font-medium uppercase text-blue-800">Social</h2>
+	<div class="rounded border bg-gray-200 px-4 py-6 shadow">
+		<div class="flex items-center space-x-4">
+			{
+				siteConfig.socialLinks.map((socialLink) => {
+					const Icon = icons[socialLink.iconName];
+					return (
+						<a href={socialLink.url}>
+							<span class="sr-only">{socialLink.label}</span>
+							<Icon class="w-8 text-blue-800" />
+						</a>
+					);
+				})
+			}
+		</div>
+	</div>
+</article>

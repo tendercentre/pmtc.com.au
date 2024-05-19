@@ -1,0 +1,30 @@
+---
+import type { CardProps } from './card';
+
+type Props = CardProps;
+
+const { copy, heading, href } = Astro.props;
+
+const headingId = 'heading-' + heading.toLowerCase().replace(/\s/g, '-');
+---
+
+<div class="flex flex-col rounded border bg-white shadow">
+	<h2
+		class="rounded-t-md bg-gray-100 py-2 text-center font-display text-2xl font-medium uppercase text-blue-800"
+		id={headingId}
+	>
+		{heading}
+	</h2>
+	<div class="flex flex-1 flex-col border-t px-4 py-6">
+		<Fragment set:html={copy} />
+		<div class="mt-auto pt-12">
+			<a
+				aria-labelledby={headingId}
+				class="inline-block w-full rounded border-b-8 border-blue-900 bg-blue-800 px-4 py-2 text-center font-medium text-white"
+				href={href}
+			>
+				Read more
+			</a>
+		</div>
+	</div>
+</div>

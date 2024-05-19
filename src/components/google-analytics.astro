@@ -1,0 +1,20 @@
+---
+type Props = {
+	gaId: string;
+};
+
+const { gaId } = Astro.props;
+const src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+---
+
+<script is:inline>
+	window['dataLayer'] = window['dataLayer'] || [];
+	function gtag() {
+		window['dataLayer'].push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', gaId);
+</script>
+
+<script is:inline src={src}></script>

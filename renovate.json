@@ -20,14 +20,6 @@
 		{
 			"groupName": "eslint",
 			"matchPackagePatterns": ["eslint*"]
-		},
-		{
-			"groupName": "keystatic",
-			"matchPackagePatterns": ["@keystatic*"]
-		},
-		{
-			"groupName": "react",
-			"matchPackageNames": ["react", "react-dom"]
 		}
 	],
 	"postUpdateOptions": ["pnpmDedupe"],
