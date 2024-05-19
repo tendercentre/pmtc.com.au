@@ -5,16 +5,32 @@ import { siteConfig } from '../lib/site-config';
 <nav>
 	<ul class="mx-auto flex w-full max-w-5xl items-center justify-around">
 		{
-			siteConfig.siteNavigation.map((navItem) => (
-				<li class="flex-1">
-					<a
-						class="inline-block w-full border-t-4 border-transparent py-4 text-center font-medium transition duration-150 ease-in-out hover:border-yellow-200 hover:bg-blue-800"
-						href={navItem.slug}
-					>
-						{navItem.label}
-					</a>
-				</li>
-			))
+			siteConfig.siteNavigation.map((navItem) => {
+				const isCurrent = Astro.url.pathname === navItem.slug;
+				return (
+					<li class="flex-1">
+						<a
+							class:list={[
+								'inline-block',
+								'w-full',
+								'border-t-4',
+								isCurrent ? 'border-yellow-200' : 'border-transparent',
+								'py-4',
+								'text-center',
+								'font-medium',
+								'transition',
+								'duration-150',
+								'ease-in-out',
+								'hover:border-yellow-200',
+								'hover:bg-blue-800',
+							]}
+							href={navItem.slug}
+						>
+							{navItem.label}
+						</a>
+					</li>
+				);
+			})
 		}
 	</ul>
 </nav>
