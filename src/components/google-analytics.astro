@@ -1,20 +1,19 @@
 ---
-type Props = {
-	gaId: string;
-};
+import { siteConfig } from '../lib/site-config';
 
-const { gaId } = Astro.props;
-const src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
----
+const src = `https://www.googletagmanager.com/gtag/js?id=${siteConfig.gaId}`;
 
-<script is:inline>
+const gaScript = `
+<script>
 	window['dataLayer'] = window['dataLayer'] || [];
 	function gtag() {
 		window['dataLayer'].push(arguments);
 	}
 	gtag('js', new Date());
-
-	gtag('config', gaId);
+	gtag('config', '${siteConfig.gaId}');
 </script>
+<script src="${src}"></script>
+`;
+---
 
-<script is:inline src={src}></script>
+<Fragment set:html={gaScript} />

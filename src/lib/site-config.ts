@@ -14,9 +14,10 @@ export const siteConfig = {
 		line2: 'Port Macquarie, NSW, 2444',
 		googleMaps: 'https://g.page/tendercentre',
 	},
-	facebookUrl,
-	instagramUrl,
 	buyersPremium: '11%',
+	facebookUrl,
+	gaId: 'UA-111452383-1',
+	instagramUrl,
 	processingFee: '$3.30',
 	siteNavigation: [
 		{
