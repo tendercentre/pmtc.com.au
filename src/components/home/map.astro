@@ -1,0 +1,16 @@
+---
+import { siteConfig } from '../../lib/site-config';
+---
+
+<article class="rounded-md border bg-white px-4 py-6 shadow">
+	<div class="relative aspect-video overflow-hidden rounded">
+		<iframe
+			allowfullscreen
+			aria-hidden={false}
+			class="absolute inset-0 h-full w-full border-none"
+			loading="lazy"
+			src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6806.934245756351!2d152.882405!3d-31.456334!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9f3b717d29c9fdd6!2sPort%20Macquarie%20Tender%20Centre!5e0!3m2!1sen!2sus!4v1605390939667!5m2!1sen!2sus"
+			tabindex={0}
+			title={`${siteConfig.title} Location`}></iframe>
+	</div>
+</article>

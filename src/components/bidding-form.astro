@@ -1,0 +1,155 @@
+---
+import Field from './form/field.astro';
+import Fieldset from './form/fieldset.astro';
+import Input from './form/input.astro';
+import Textarea from './form/textarea.astro';
+import Terms from './terms.astro';
+---
+
+<form
+	action="/success/"
+	class="mx-auto mb-0 w-full rounded border bg-gray-100 shadow"
+	data-netlify="true"
+	method="POST"
+	name="bid-form"
+>
+	<input value="bid-form" name="form-name" type="hidden" />
+	<div class="md:flex">
+		<div class="flex w-full flex-1 flex-col gap-4 p-3">
+			<Fieldset legend="Name">
+				<Field for="first-name" label="First name" labelVisibility="hidden">
+					<Input
+						autocomplete="given-name"
+						id="first-name"
+						name="first-name"
+						placeholder="Johnny"
+						required
+					/>
+				</Field>
+				<Field for="last-name" label="Last name" labelVisibility="hidden">
+					<Input
+						autocomplete="family-name"
+						id="last-name"
+						name="last-name"
+						placeholder="Appleseed"
+						required
+					/>
+				</Field>
+			</Fieldset>
+
+			<Fieldset legend="Address">
+				<Field for="address-line1" label="Line 1" labelVisibility="hidden">
+					<Input
+						autocomplete="address-line1"
+						id="address-line1"
+						name="address-line1"
+						placeholder="35 Merrigal Road"
+						required
+					/>
+				</Field>
+				<Field for="address-line2" label="Line 2" labelVisibility="hidden">
+					<Input
+						autocomplete="address-line2"
+						id="address-line2"
+						name="address-line2"
+						placeholder="Port Macquarie NSW 2444"
+						required
+					/>
+				</Field>
+			</Fieldset>
+
+			<Field for="phone-number" label="Phone number">
+				<Input
+					autocomplete="tel"
+					id="phone-number"
+					name="phone-number"
+					placeholder="0400 000 000"
+					required
+					type="tel"
+				/>
+			</Field>
+
+			<Field for="email-address" label="Email address">
+				<Input
+					autocomplete="email"
+					id="email-address"
+					name="email-address"
+					placeholder="your.name@example.com"
+					required
+					type="email"
+				/>
+			</Field>
+		</div>
+		<div class="flex w-full flex-1 flex-col gap-4 p-3">
+			<Field for="lot-number" label="Lot number">
+				<Input autocomplete="off" id="lot-number" name="lot-number" placeholder="10123" required />
+			</Field>
+
+			<Field for="lot-description" label="Lot description">
+				<Input
+					autocomplete="off"
+					id="lot-description"
+					name="lot-description"
+					placeholder="Acoustic guitar"
+					required
+					type="text"
+				/>
+			</Field>
+
+			<Field for="bid-price" label="Bid price">
+				<small class="text-grey-darker" id="buyer-premium">
+					(A buyer's premium of 11% + $3.30 is added to this offer for successful bids.)
+				</small>
+				<span class="flex rounded border">
+					<span class="flex items-center rounded-l border-r px-4"> $ </span>
+					<Input
+						aria-describedby="buyer-premium"
+						autocomplete="off"
+						class="flex-1 !rounded-none border-none"
+						id="bid-price"
+						name="bid-price"
+						placeholder="100"
+						required
+					/>
+					<span class="flex items-center rounded-r border-l px-4"> .00 </span>
+				</span>
+			</Field>
+			<Field for="message" label="Message">
+				<Textarea
+					class="h-24"
+					id="message"
+					name="message"
+					placeholder="Optional — please leave blank unless you have a good reason"
+					rows={3}
+					spellcheck
+				/>
+			</Field>
+		</div>
+	</div>
+	<div class="p-3">
+		<Terms />
+		<div class="mt-2 w-full">
+			<label class="inline-flex items-center">
+				<input checked type="checkbox" />
+				<span class="pl-2">
+					I agree to the{' '}
+					<strong class="text-grey-darker"> Terms &amp; Conditions </strong>
+				</span>
+			</label>
+		</div>
+		<div class="hidden">
+			<label for="bot-field">
+				Don’t fill this out if you're human:
+				<input name="bot-field" />
+			</label>
+		</div>
+		<div class="mx-auto mt-2 max-w-sm text-xl">
+			<button
+				class="inline-block w-full rounded border-b-8 border-blue-900 bg-blue-800 px-4 py-2 text-center font-medium text-white"
+				type="submit"
+			>
+				Submit bid
+			</button>
+		</div>
+	</div>
+</form>

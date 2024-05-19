@@ -1,4 +1,4 @@
 [build]
   command = "pnpm run build"
-  publish = ".next"
+  publish = "dist"
   node_version = "20"

@@ -1,0 +1,34 @@
+---
+import type { CardProps } from './card';
+import Card from './card.astro';
+
+const cards = [
+	{
+		heading: 'Buying?',
+		copy: `
+			<p>All the information you need about how buying from the Tender Centre works.</p>
+		`,
+		href: '/buyers',
+	},
+	{
+		heading: 'Selling?',
+		copy: `
+			<p>When can you take goods in to sell? What are the commission rates?</p>
+			<p>Find out here.</p>
+		`,
+		href: '/sellers',
+	},
+	{
+		heading: 'FAQ',
+		copy: `
+			<p>You got questions?</p>
+			<p>We got answers!</p>
+		`,
+		href: '/faq',
+	},
+] satisfies Array<CardProps>;
+---
+
+<article class="grid gap-4 lg:grid-cols-3">
+	{cards.map((card) => <Card {...card} />)}
+</article>

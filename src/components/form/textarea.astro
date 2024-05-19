@@ -1,0 +1,23 @@
+---
+type Props = astroHTML.JSX.DefinedIntrinsicElements['textarea'] & {
+	id: string;
+};
+const props = Astro.props;
+const { id, class: className, 'class:list': classList, ...consumerProps } = props;
+---
+
+<textarea
+	{...consumerProps}
+	class:list={[
+		'rounded',
+		'border-gray-300',
+		'focus-visible:outline-none',
+		'focus-visible:ring-2',
+		'focus-visible:ring-blue-700',
+		'focus-visible:ring-offset-2',
+		'focus-visible:ring-offset-white',
+		'focus-visible:border-gray-300',
+		className,
+		classList,
+	]}
+	id={id}></textarea>
