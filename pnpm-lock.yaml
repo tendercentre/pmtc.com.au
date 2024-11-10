@@ -9,74 +9,74 @@ importers:
   .:
     dependencies:
       '@astrojs/check':
-        specifier: ^0.9.0
+        specifier: ^0.9.4
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.6.3)
       '@astrojs/markdoc':
-        specifier: ^0.11.0
+        specifier: ^0.11.5
         version: 0.11.5(astro@4.16.10(rollup@4.25.0)(typescript@5.6.3))
       '@astrojs/netlify':
-        specifier: ^5.2.1
+        specifier: ^5.5.4
         version: 5.5.4(astro@4.16.10(rollup@4.25.0)(typescript@5.6.3))
       '@astrojs/sitemap':
-        specifier: ^3.1.4
+        specifier: ^3.2.1
         version: 3.2.1
       '@astrojs/tailwind':
-        specifier: ^5.1.0
+        specifier: ^5.1.2
         version: 5.1.2(astro@4.16.10(rollup@4.25.0)(typescript@5.6.3))(tailwindcss@3.4.14)
       '@fontsource-variable/oswald':
-        specifier: ^5.0.20
+        specifier: ^5.1.0
         version: 5.1.0
       '@fontsource-variable/roboto-flex':
-        specifier: ^5.0.15
+        specifier: ^5.1.0
         version: 5.1.0
       astro:
-        specifier: ^4.8.6
+        specifier: ^4.16.10
         version: 4.16.10(rollup@4.25.0)(typescript@5.6.3)
       tailwindcss:
-        specifier: ^3.4.3
+        specifier: ^3.4.14
         version: 3.4.14
     devDependencies:
       '@eslint/compat':
-        specifier: ^1.0.1
+        specifier: ^1.2.2
         version: 1.2.2(eslint@9.14.0(jiti@1.21.6))
       '@eslint/js':
-        specifier: ^9.3.0
+        specifier: ^9.14.0
         version: 9.14.0
       '@ianvs/prettier-plugin-sort-imports':
-        specifier: ^4.2.1
+        specifier: ^4.4.0
         version: 4.4.0(prettier@3.3.3)
       '@tailwindcss/forms':
-        specifier: ^0.5.7
+        specifier: ^0.5.9
         version: 0.5.9(tailwindcss@3.4.14)
       '@tailwindcss/typography':
-        specifier: ^0.5.13
+        specifier: ^0.5.15
         version: 0.5.15(tailwindcss@3.4.14)
       eslint:
-        specifier: ^9.3.0
+        specifier: ^9.14.0
         version: 9.14.0(jiti@1.21.6)
       eslint-plugin-react:
-        specifier: ^7.34.1
+        specifier: ^7.37.2
         version: 7.37.2(eslint@9.14.0(jiti@1.21.6))
       globals:
-        specifier: ^15.2.0
+        specifier: ^15.12.0
         version: 15.12.0
       prettier:
-        specifier: ^3.2.5
+        specifier: ^3.3.3
         version: 3.3.3
       prettier-plugin-astro:
-        specifier: ^0.14.0
+        specifier: ^0.14.1
         version: 0.14.1
       prettier-plugin-packagejson:
-        specifier: ^2.5.0
+        specifier: ^2.5.3
         version: 2.5.3(prettier@3.3.3)
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.0
+        specifier: ^0.6.8
         version: 0.6.8(@ianvs/prettier-plugin-sort-imports@4.4.0(prettier@3.3.3))(prettier-plugin-astro@0.14.1)(prettier@3.3.3)
       typescript:
-        specifier: ^5.4.5
+        specifier: ^5.6.3
         version: 5.6.3
       typescript-eslint:
-        specifier: ^8.0.0
+        specifier: ^8.13.0
         version: 8.13.0(eslint@9.14.0(jiti@1.21.6))(typescript@5.6.3)
 
 packages:
